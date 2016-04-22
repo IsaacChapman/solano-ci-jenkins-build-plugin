@@ -1,0 +1,31 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <!--
+    This jelly script is used for per-project configuration.
+
+    See global.jelly for a general discussion about jelly script.
+  -->
+  <f:entry title="Branch" field="branch" description="Leave blank for default Solano CI branch">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Webhook URL" field="webhookurl">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="API Key" field="apikey">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="API Host" field="apihost" description="Leave blank for default Solano CI API host">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Profile" field="profile">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Force build" field="force" description="Only build if there have been new commits since the last build">
+    <f:checkbox />
+  </f:entry>
+  <!--
+     Additional fields: 
+       host (default: ci.solanolas.com)
+       artifacts (textarea with a single line per file? Allow wildcards?)
+  -->
+</j:jelly>
